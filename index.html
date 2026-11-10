@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FieldLoop — Field Data Review and Follow Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100"><path fill="currentColor" d="M18 8h30v62H34v22H18zM52 8h30v84H66V30H52z"/></symbol>
+</svg>
+
+<main id="stage" data-mode="title">
+  <div class="bg"></div>
+  <div class="facet f1"></div>
+  <div class="facet f2"></div>
+  <svg class="streaks" id="streaks" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <div class="arc"></div>
+
+  <!-- Title page -->
+  <section class="title-els" id="titlePage">
+    <div class="emblem">
+      <div class="diamond-big"></div>
+      <div class="collector" id="collector" aria-hidden="true"></div>
+      <svg class="logo big"><use href="#logo"/></svg>
+    </div>
+    <p class="tally" id="tally">0000 records collected</p>
+    <p class="by" id="by"></p><span class="by-line"></span>
+    <h1 id="pName"></h1>
+    <p class="sub" id="pSub"></p>
+    <p class="kind" id="pKind"></p>
+    <button class="cta" id="start">Start Presentation</button>
+  </section>
+
+  <!-- Outline wheel -->
+  <nav class="menu" id="menu" aria-label="Outline"></nav>
+  <div class="outline-head"><h2>Outline</h2><p class="sub" id="oSub"></p></div>
+
+  <!-- content pages are generated here -->
+  <div id="deck"></div>
+
+  <div class="hud"><span id="count"></span><span class="hint">← → or click to navigate</span></div>
+
+  <div class="intro" id="intro">
+    <div class="grow"></div>
+    <div class="diamond-small"><svg class="logo"><use href="#logo"/></svg></div>
+  </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="content.js"></script>
+<script src="script.js"></script>
+<script src="pills.js"></script>
+</body>
+</html>
